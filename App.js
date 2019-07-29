@@ -1,8 +1,15 @@
-import React from 'react'
 import WelcomePage from './pages/Welcome'
 import LoginPage from './pages/Login'
-export default function App () {
-  return (
-    <LoginPage />
-  )
-}
+import DashboardPage from './pages/Dashboard'
+
+import { createStackNavigator, createAppContainer } from 'react-navigation'
+
+const AppNavigator = createStackNavigator({
+  Welcome: WelcomePage,
+  Login: LoginPage,
+  Dashboard: DashboardPage
+}, {
+  headerMode: 'none'
+})
+
+export default createAppContainer(AppNavigator)

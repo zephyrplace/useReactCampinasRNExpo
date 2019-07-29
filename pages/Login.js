@@ -2,7 +2,8 @@ import React from 'react'
 import { View, Text, TextInput, Image, TouchableOpacity } from 'react-native'
 import LogoLogin from '../assets/full_logo_white.png'
 import IconAdd from '../assets/icone_fechar.png'
-export default function Welcome () {
+import Button from '../component/Button'
+export default function Login () {
   return (
     <View style={{ flex: 1, alignItems: 'stretch', justifyContent: 'space-between' }}>
       <View style={{ backgroundColor: '#303e64', alignItems: 'center', justifyContent: 'center', height: '15%' }}>
@@ -20,9 +21,7 @@ export default function Welcome () {
 
       </View>
       <View style={{ padding: 10 }}>
-        <TouchableOpacity style={{ width: '100%', borderRadius: 7, justifyContent: 'center', alignItems: 'center', minHeight: 48, backgroundColor: '#0285ca' }}>
-          <Text style={{ color: `white`, fontSize: 20 }}>acessar</Text>
-        </TouchableOpacity>
+        <Button title='acessar' navigateTo='Dashboard' />
       </View>
     </View>
   )
